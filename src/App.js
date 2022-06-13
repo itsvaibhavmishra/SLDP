@@ -1,25 +1,101 @@
-import logo from './logo.svg';
-import './App.css';
+// importing library
+import React, { useState, useRef, useEffect} from "react";
+import * as tf from "@tensorflow/tfjs";
+import Webcam from "react-webcam";
+import "./App.css";
+import {drawRect} from "./label.js";
 
 function App() {
+  const webcamRef = useRef(null);
+  const canvasRef = useRef(null);
+
+  // Loading model
+  const runMobnet = async () => {
+
+    // getting model link from cloud
+    const net = await tf.loadGraphModel('https://tfjsconvertedmodel.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json');
+
+    // Detecting hands
+    setInterval(() => {
+      detect(net); // fuction for making detections using webcam
+    }, 16.7); // detections frequency
+  };
+
+  // function for hand detections
+  const detect = async (net) => {
+
+    // checking if camera is accessible
+    if (
+      typeof webcamRef.current !== "undefined" && 
+      webcamRef.current !== null &&
+      webcamRef.current.video.readyState === 4
+    ) {
+
+      // fetching video properties
+      const video = webcamRef.current.video;
+      const videoWidth = webcamRef.current.video.videoWidth;
+      const videoHeight = webcamRef.current.video.videoHeight;
+
+      // configuring video dimensions
+      webcamRef.current.video.width = videoWidth;  
+      webcamRef.current.video.height = videoHeight;
+      
+      // video canvas height and width
+      canvasRef.current.width = videoWidth;
+      canvasRef.current.height = videoHeight;
+
+      // Making Detections
+      const img = tf.browser.fromPixels(video);
+      const resized = tf.image.resizeBilinear(img, [640, 480]);
+      const casted = resized.cast('int32');
+      const expanded = casted.expandDims(0)
+      const obj = await net.executeAsync(expanded);
+      console.log(obj);
+
+      // Cleaning memory
+      tf.dispose(img);
+      tf.dispose(resized);
+      tf.dispose(casted);
+      tf.dispose(expanded);
+      tf.dispose(obj);
+
+    };
+  };
+
+  useEffect(()=>{runMobnet()},[]);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Webcam ref = {webcamRef} style={
+          {
+            position: 'absolute',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            left: 0,
+            right: 0,
+            textAlign: 'center',
+            zIndex: 9,
+            width: 640,
+            height: 480
+          }
+        }/>
+        <canvas ref = {canvasRef} style={
+          {
+            position: 'absolute',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            left: 0,
+            right: 0,
+            textAlign: 'center',
+            zIndex: 9,
+            width: 640,
+            height: 480
+          }
+        }/>
       </header>
     </div>
   );
-}
+};
 
 export default App;
