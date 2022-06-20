@@ -98,9 +98,9 @@ function App() {
       <p>Lorem ipsum dolor sit amet, consectetur adipiscin</p>
     </div>
 
-    {/* Contact Section */}
-    <div className="w3-container w3-padding-32" id="contact">
-      <h3 className="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+    {/* Developer Section */}
+    <div className="w3-container w3-padding-32" id="developer">
+      <h3 className="w3-border-bottom w3-border-light-grey w3-padding-16">Developer</h3>
       <p>lorem ipsum dolor sit amet, consectetur adipis</p>
     </div></>
   );
