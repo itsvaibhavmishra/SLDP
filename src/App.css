@@ -3,7 +3,11 @@
 }
 
 .App-header {
-  background-color: white;
+
+  background-image: url(../public/sign1.jpg);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
   position: sticky;
   min-height: 100vh;
   display: flex;
@@ -12,4 +16,15 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-header .web {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 700px;
+  right: 0;
+  text-align: center;
+  width: 640px;
+  height: 480px;
 }

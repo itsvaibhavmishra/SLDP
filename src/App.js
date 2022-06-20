@@ -80,29 +80,9 @@ function App() {
   return (
     <><div className="App">
       <header className="App-header" id = 'home'>
-
-        <Webcam ref={webcamRef} style={{
-          position: 'absolute',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          left: 0,
-          right: 0,
-          textAlign: 'center',
-          zIndex: 9,
-          width: 640,
-          height: 480,
-        }} />
-        <canvas ref={canvasRef} style={{
-          position: 'absolute',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          left: 0,
-          right: 0,
-          textAlign: 'center',
-          zIndex: 9,
-          width: 640,
-          height: 480
-        }} />
+        
+        <Webcam ref={webcamRef} className="web"/>
+        <canvas ref={canvasRef} className='web'/>
       </header>
     </div>
 
@@ -115,10 +95,7 @@ function App() {
     {/* About Section */}
     <div className="w3-container w3-padding-32" id="about">
       <h3 className="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat.
-      </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscin</p>
     </div>
 
     {/* Contact Section */}
