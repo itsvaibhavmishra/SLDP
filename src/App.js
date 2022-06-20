@@ -78,36 +78,56 @@ function App() {
   useEffect(()=>{runMobnet()},[]);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <Webcam ref = {webcamRef} style={
-          {
-            position: 'absolute',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            left: 0,
-            right: 0,
-            textAlign: 'center',
-            zIndex: 9,
-            width: 640,
-            height: 480
-          }
-        }/>
-        <canvas ref = {canvasRef} style={
-          {
-            position: 'absolute',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            left: 0,
-            right: 0,
-            textAlign: 'center',
-            zIndex: 9,
-            width: 640,
-            height: 480
-          }
-        }/>
+    <><div className="App">
+      <header className="App-header" id="home">
+
+        <Webcam ref={webcamRef} style={{
+          position: 'absolute',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          left: 0,
+          right: 0,
+          textAlign: 'center',
+          zIndex: 9,
+          width: 640,
+          height: 480,
+        }} />
+        <canvas ref={canvasRef} style={{
+          position: 'absolute',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          left: 0,
+          right: 0,
+          textAlign: 'center',
+          zIndex: 9,
+          width: 640,
+          height: 480
+        }} />
       </header>
     </div>
+
+    {/* Page content */}
+    <div class="w3-content w3-padding"></div>
+
+    {/* Commands Section */}
+    <div class="w3-container w3-padding-32" id="command">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Commands</h3>
+    </div>
+    
+    {/* About Section */}
+    <div class="w3-container w3-padding-32" id="about">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </div>
+
+    {/* Contact Section */}
+    <div class="w3-container w3-padding-32" id="contact">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+      <p>lorem ipsum dolor sit amet, consectetur adipis</p>
+    </div></>
   );
 };
 
