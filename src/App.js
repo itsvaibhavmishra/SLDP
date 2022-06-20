@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect} from "react";
 import * as tf from "@tensorflow/tfjs";
 import Webcam from "react-webcam";
 import "./App.css";
-import {drawRect} from "./label.js";
+import {drawRect} from "./labelmap";
 
 function App() {
   const webcamRef = useRef(null);
@@ -13,7 +13,7 @@ function App() {
   const runMobnet = async () => {
 
     // getting model link from cloud
-    const net = await tf.loadGraphModel('https://tfjsconvertedmodel.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json');
+    const net = await tf.loadGraphModel('https://tfjshandsignmodel.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json');
 
     // Detecting hands
     setInterval(() => {
@@ -48,10 +48,23 @@ function App() {
       const img = tf.browser.fromPixels(video);
       const resized = tf.image.resizeBilinear(img, [640, 480]);
       const casted = resized.cast('int32');
-      const expanded = casted.expandDims(0)
+      const expanded = casted.expandDims(0);
       const obj = await net.executeAsync(expanded);
-      console.log(obj);
 
+      // console.log(await obj[2].array())
+
+      // defining where objects are coming from
+      const boxes = await obj[0].array(); // boxes
+      const classes = await obj[6].array(); // classes
+      const scores = await obj[4].array();  // threshold
+
+      const ctx = canvasRef.current.getContext("2d");
+
+      // using requestAnimationFrame method for smother drawing for detections
+      requestAnimationFrame(() => {
+        drawRect(boxes[0], classes[0], scores[0], 0.8, videoWidth, videoHeight, ctx)
+      });
+      // console.log(obj);
       // Cleaning memory
       tf.dispose(img);
       tf.dispose(resized);
