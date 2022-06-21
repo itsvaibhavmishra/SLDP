@@ -6,6 +6,7 @@ import "./App.css";
 import { drawRect } from "./labelmap";
 import Navbar from "./components/Navbar";
 import Logo from "./assets/logo.png";
+import Sign from "./assets/sign-1.jpeg";
 function App() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
@@ -89,30 +90,49 @@ function App() {
     <>
       <div className="App">
         <Navbar />
-        <div className="main-container">
+        <div className="main-container scrolbar">
           <div className="flex flex-wrap justify-center align-center h-full">
-            <div className="w-full md:w-1/2 h-full overflow-auto">
-              <p>Lmao...</p>
+            <div className="w-full md:w-1/2 h-full overflow-auto scrolbar">
+              {/* <img src={Sign} alt="HandSign" className="" /> */}
+
+              {/* About */}
+              <section class="text-gray-600 body-font overflow-hidden">
+                <div class="container px-5 py-24 mx-auto">
+                  <div class="flex flex-wrap -m-12">
+                    <div class="p-12 md:w-1/2 flex flex-col items-start">
+                    <span class="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest">ABOUT</span>
+                    <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">This section is for page info</h2>
+                    <p class="leading-relaxed mb-8">Live-edge letterpress cliche, salvia fanny pack humblebrag narwhal portland. VHS man braid palo santo hoodie brunch trust fund. Bitters hashtag waistcoat fashion axe chia unicorn. Plaid fixie chambray 90's, slow-carb etsy tumeric. Cray pug you probably haven't heard of them hexagon kickstarter craft beer pork chic.</p>
+                    <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              {/* Developer */}
+              <section class="text-gray-600 body-font overflow-hidden">
+                <div class="container px-5 py-24 mx-auto">
+                  <div class="flex flex-wrap -m-12">
+                    <div class="p-12 md:w-1/2 flex flex-col items-start">
+                    <span class="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest">Developer</span>
+                    <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">This section is for developer</h2>
+                    <p class="leading-relaxed mb-8">Live-edge letterpress cliche, salvia fanny pack humblebrag narwhal portland. VHS man braid palo santo hoodie brunch trust fund. Bitters hashtag waistcoat fashion axe chia unicorn. Plaid fixie chambray 90's, slow-carb etsy tumeric. Cray pug you probably haven't heard of them hexagon kickstarter craft beer pork chic.</p>
+                    <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
             </div>
             <div className="w-full md:w-1/2 h-full flex flex-col justify-center align-center relative">
               <div>
                 <Webcam ref={webcamRef} className="web top-0 left-0" />
                 <canvas ref={canvasRef} className="web absolute top-0 left-0" />
               </div>
-              <div className="overflow-x-auto bottom-5 left-0 ">
-                <div className="p-5 flex">
-                  <div className="flex-shrink-0">
-                    <img src={Logo} alt="dsad" />
-                  </div>
-                  <div className="flex-shrink-0">
-                    <img src={Logo} alt="dsad" />
-                  </div>
-                  <div className="flex-shrink-0">
-                    <img src={Logo} alt="dsad" />
-                  </div>
-                  <div className="flex-shrink-0">
-                    <img src={Logo} alt="dsad" />
-                  </div>
+              <div className="overflow-x-auto bottom-5 left-0 scrolbar">
+                <div className="p-1 flex">
                   <div className="flex-shrink-0">
                     <img src={Logo} alt="dsad" />
                   </div>

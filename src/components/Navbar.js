@@ -10,13 +10,13 @@ const Navbar = () => {
             <span class="ml-3 text-xl">Sign Language Detection Program</span>
           </a>
           <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-            <a class="mr-5 hover:text-gray-900">First Link</a>
-            <a class="mr-5 hover:text-gray-900">Second Link</a>
-            <a class="mr-5 hover:text-gray-900">Third Link</a>
-            <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+            <a href="#home" class="mr-5 hover:text-gray-900">Home</a>
+            <a href="#about" class="mr-5 hover:text-gray-900">About</a>
+            <a href="#developer" class="mr-5 hover:text-gray-900">Developer</a>
           </nav>
+          <a href="https://github.com/itsvaibhavmishra/SLDP">
           <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-            Button
+            GitHub
             <svg
               fill="none"
               stroke="currentColor"
@@ -29,6 +29,7 @@ const Navbar = () => {
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
           </button>
+          </a>
         </div>
       </header>
     </div>

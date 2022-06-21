@@ -36,7 +36,7 @@
 
 .main-container{
   height: auto;
-  margin: auto;
+  margin: auto; 
 }
 @media(min-width:768px){
   .main-container{
@@ -44,4 +44,13 @@
     margin: auto;
     overflow: hidden;
   }
+}
+
+.scrolbar::-webkit-scrollbar {
+  display: none;
+}
+
+.scrolbar {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;
 }
