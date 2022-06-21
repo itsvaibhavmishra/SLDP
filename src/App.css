@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.App-header {
+/* .App-header {
 
   background-image: url(../public/sign1.jpg);
   background-position: center;
@@ -27,4 +27,16 @@
   text-align: center;
   width: 640px;
   height: 480px;
+} */
+
+.main-container{
+  height: auto;
+  margin: auto;
+}
+@media(min-width:768px){
+  .main-container{
+    height: 90vh;
+    margin: auto;
+    overflow: hidden;
+  }
 }
