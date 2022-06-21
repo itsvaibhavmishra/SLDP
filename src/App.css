@@ -29,13 +29,18 @@
   height: 480px;
 } */
 
+.web {
+  width: 640px;
+  height: 480px;
+}
+
 .main-container{
   height: auto;
   margin: auto;
 }
 @media(min-width:768px){
   .main-container{
-    height: 90vh;
+    height: 87vh;
     margin: auto;
     overflow: hidden;
   }
