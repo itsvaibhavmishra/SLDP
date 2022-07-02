@@ -54,3 +54,26 @@
   -ms-overflow-style: none;  
   scrollbar-width: none;
 }
+
+.signContainer > div{
+  margin: 10px;
+  width: 100px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.xScroll::-webkit-scrollbar {
+  height: 10px;
+  
+}
+ 
+.xScroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px gray;
+  border-radius: 30px;
+}
+ 
+.xScroll::-webkit-scrollbar-thumb {
+  background-color: rgba(10, 177, 232, 0.963);
+  outline: 1px solid rgba(10, 177, 232, 0.963);
+  border-radius: 30px;
+}

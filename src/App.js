@@ -5,8 +5,17 @@ import Webcam from "react-webcam";
 import "./App.css";
 import { drawRect } from "./labelmap";
 import Navbar from "./components/Navbar";
-import Logo from "./assets/logo.png";
+
 import Sign from "./assets/sign-1.jpeg";
+import sign1 from "./assets/Bathroom.png";
+import sign2 from "./assets/Friend.png";
+import sign3 from "./assets/Hello.png";
+import sign4 from "./assets/No.png";
+import sign5 from "./assets/Ok.png";
+import sign6 from "./assets/Please.png";
+import sign7 from "./assets/Thank You.png";
+import sign8 from "./assets/Yes.png";
+
 function App() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
@@ -101,8 +110,12 @@ function App() {
                   <div class="flex flex-wrap -m-12">
                     <div class="p-12 md:w-1/2 flex flex-col items-start">
                     <span class="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest">ABOUT</span>
-                    <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">This section is for page info</h2>
-                    <p class="leading-relaxed mb-8">Live-edge letterpress cliche, salvia fanny pack humblebrag narwhal portland. VHS man braid palo santo hoodie brunch trust fund. Bitters hashtag waistcoat fashion axe chia unicorn. Plaid fixie chambray 90's, slow-carb etsy tumeric. Cray pug you probably haven't heard of them hexagon kickstarter craft beer pork chic.</p>
+                    <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">Hand Sign Detection Program</h2>
+                    <p class="leading-relaxed mb-8">
+                      The purpose of this application is to help people with speech impairments communicate freely with others.<br/>
+                      Individuals can use this web app to easily convey their messages to others using simple hand signs.                      
+                    </p>
+                    <img src={Sign} alt="HandSign" className="" />
                     <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
                     </div>
                     </div>
@@ -116,9 +129,33 @@ function App() {
                   <div class="flex flex-wrap -m-12">
                     <div class="p-12 md:w-1/2 flex flex-col items-start">
                     <span class="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest">Developer</span>
-                    <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">This section is for developer</h2>
-                    <p class="leading-relaxed mb-8">Live-edge letterpress cliche, salvia fanny pack humblebrag narwhal portland. VHS man braid palo santo hoodie brunch trust fund. Bitters hashtag waistcoat fashion axe chia unicorn. Plaid fixie chambray 90's, slow-carb etsy tumeric. Cray pug you probably haven't heard of them hexagon kickstarter craft beer pork chic.</p>
+                    <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">Vaibhaw Kumar Mishra</h2>
+                    <p class="leading-relaxed mb-8">
+                      Dedicated to learning new things, I am pursuing Bachelor of Technology degree in Computer Science Engineering.<br/>
+                      Attentive to new ideas and technologies, I have been involved in multiple projects and this web app is one of them.
+                    </p>
                     <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
+                    <a class="inline-flex items-center" href="https://github.com/itsvaibhavmishra" target={"_blank"}>
+                      <img alt="github" src="https://img.icons8.com/material-outlined/344/github.png" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"/>
+                      <span class="flex-grow flex flex-col pl-4">
+                        <span class="title-font font-medium text-gray-900">@itsvaibhavmishra</span>
+                        <span class="text-gray-400 text-xs tracking-widest mt-0.5">GitHub</span>
+                      </span>
+                    </a>
+                    <a class="inline-flex items-center" href="https://www.linkedin.com/in/itsvaibhavmishra/" target={"_blank"}>
+                      <img alt="linkedin" src="https://img.icons8.com/fluency/344/linkedin-circled.png" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"/>
+                      <span class="flex-grow flex flex-col pl-4">
+                        <span class="title-font font-medium text-gray-900">@itsvaibhavmishra</span>
+                        <span class="text-gray-400 text-xs tracking-widest mt-0.5">LinkedIn</span>
+                      </span>
+                    </a>
+                    <a class="inline-flex items-center" href="mailto:vaibhavmishra658@gmail.com" target={"_blank"}>
+                      <img alt="gmail" src="https://img.icons8.com/color/344/google-plus--v1.png" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"/>
+                      <span class="flex-grow flex flex-col pl-4">
+                        <span class="title-font font-medium text-gray-900">vaibhavmishra658</span>
+                        <span class="text-gray-400 text-xs tracking-widest mt-0.5">Gmail</span>
+                      </span>
+                    </a>
                     </div>
                     </div>
                   </div>
@@ -131,28 +168,31 @@ function App() {
                 <Webcam ref={webcamRef} className="web top-0 left-0" />
                 <canvas ref={canvasRef} className="web absolute top-0 left-0" />
               </div>
-              <div className="overflow-x-auto bottom-5 left-0 scrolbar">
-                <div className="p-1 flex">
-                  <div className="flex-shrink-0">
-                    <img src={Logo} alt="dsad" />
+              <div className="overflow-y-hidden bottom-5 left-0 xScroll overflow-x-scroll">
+                <div className=" flex signContainer">
+                  <div className="flex-shrink-0 p-1 ">
+                    <img src={sign1} alt="dsad" />
                   </div>
-                  <div className="flex-shrink-0">
-                    <img src={Logo} alt="dsad" />
+                  <div className="flex-shrink-0 p-1">
+                    <img src={sign2} alt="dsad" />
                   </div>
-                  <div className="flex-shrink-0">
-                    <img src={Logo} alt="dsad" />
+                  <div className="flex-shrink-0 p-1">
+                    <img src={sign3} alt="dsad" />
                   </div>
-                  <div className="flex-shrink-0">
-                    <img src={Logo} alt="dsad" />
+                  <div className="flex-shrink-0 p-1">
+                    <img src={sign4} alt="dsad" />
                   </div>
-                  <div className="flex-shrink-0">
-                    <img src={Logo} alt="dsad" />
+                  <div className="flex-shrink-0 p-1">
+                    <img src={sign5} alt="dsad" />
                   </div>
-                  <div className="flex-shrink-0">
-                    <img src={Logo} alt="dsad" />
+                  <div className="flex-shrink-0 p-1">
+                    <img src={sign6} alt="dsad" />
                   </div>
-                  <div className="flex-shrink-0">
-                    <img src={Logo} alt="dsad" />
+                  <div className="flex-shrink-0 p-1">
+                    <img src={sign7} alt="dsad" />
+                  </div>
+                  <div className="flex-shrink-0 p-1">
+                    <img src={sign8} alt="dsad" />
                   </div>
                 </div>
               </div>
