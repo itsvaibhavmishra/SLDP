@@ -1,4 +1,4 @@
-<h2 align="center"><img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/ReadmeImgs/SLDP.png"></h2>
+<h2 align="center"><img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/SLDP.png"></h2>
 
 <p align="center">
   <img src="https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
@@ -7,11 +7,36 @@
   <img src="https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript"/>
   <img src="https://img.shields.io/badge/-Nodejs-black?style=flat-square&logo=Node.js"/>
   <img src="https://img.shields.io/badge/-React-black?style=flat-square&logo=react"/>
-</p>
+</p><br>
+
+<h2 align="center">About Project</h2>
 
 <p align="center">
-  
+  This project is an extension of the <a href="https://github.com/itsvaibhavmishra/SLDP-MODEL">SLDP_Model</a> project aiming to develop a web-based application to
+  detect sign languages in real-time using <img align="center" src="https://img.shields.io/badge/tensorflowjs-3.18.0-orange?style=flat-square&logo=html5&logoColor=white"/> in order to enable speech-impaired people to communicate effectively.
+</p>
 
+<p align="center">Project Live - <a href="https://sldp.netlify.app">Here</a></p><br>
+
+<h2 align="center">Available Signs</h2>
+
+<p align="center">
+  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Bathroom.png" width="150"/>
+  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Friend.png" width="349"/>
+  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Hello.png" width="160"/>
+  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/No.png" width="208"/>
+  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Ok.png" width="202"/>
+  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Please.png" width="150"/>
+  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Thank You.png" width="150"/>
+  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Yes.png" width="150"/>
+  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Taijutsu.png" width="150"/>
+</p>
+
+
+
+
+
+<!---
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -82,3 +107,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+--->
