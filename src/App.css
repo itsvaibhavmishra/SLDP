@@ -2,33 +2,6 @@
   text-align: center;
 }
 
-/* .App-header {
-
-  background-image: url(../public/sign1.jpg);
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  position: sticky;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-header .web {
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 700px;
-  right: 0;
-  text-align: center;
-  width: 640px;
-  height: 480px;
-} */
-
 .web {
   width: 640px;
   height: 480px;
@@ -77,4 +50,3 @@
   outline: 1px solid rgba(10, 177, 232, 0.963);
   border-radius: 30px;
 }
-

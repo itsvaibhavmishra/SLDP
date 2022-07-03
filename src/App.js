@@ -1,5 +1,5 @@
 // importing library
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import * as tf from "@tensorflow/tfjs";
 import Webcam from "react-webcam";
 import "./App.css";
@@ -127,14 +127,14 @@ function App() {
                       Attentive to new ideas and technologies, I have been involved in multiple projects and this web app is one of them.
                     </p>
                     <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
-                    <a class="inline-flex items-center" href="https://github.com/itsvaibhavmishra" target={"_blank"}>
+                    <a class="inline-flex items-center" href="https://github.com/itsvaibhavmishra" target={"_blank"} rel="noreferrer">
                       <img alt="github" src="https://img.icons8.com/material-outlined/344/github.png" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"/>
                       <span class="flex-grow flex flex-col pl-4">
                         <span class="title-font font-medium text-gray-900">@itsvaibhavmishra</span>
                         <span class="text-gray-400 text-xs tracking-widest mt-0.5">GitHub</span>
                       </span>
                     </a>
-                    <a class="inline-flex items-center" href="https://www.linkedin.com/in/itsvaibhavmishra/" target={"_blank"}>
+                    <a class="inline-flex items-center" href="https://www.linkedin.com/in/itsvaibhavmishra/" target={"_blank"} rel="noreferrer">
                       <img alt="linkedin" src="https://img.icons8.com/fluency/344/linkedin-circled.png" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"/>
                       <span class="flex-grow flex flex-col pl-4">
                         <span class="title-font font-medium text-gray-900">@itsvaibhavmishra</span>

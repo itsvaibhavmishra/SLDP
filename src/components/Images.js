@@ -10,6 +10,7 @@ import sign5 from "../assets/Ok.png";
 import sign6 from "../assets/Please.png";
 import sign7 from "../assets/Thank You.png";
 import sign8 from "../assets/Yes.png";
+import sign9 from "../assets/Taijutsu.png";
 
 const Images = () => {
   return (
@@ -17,11 +18,11 @@ const Images = () => {
         <div className=" flex signContainer">
 
             <div className="flex-shrink-0 p-1">
-                <ModalImage small={sign1} large={sign1} alt="Bathroom-Sign" />
+                <ModalImage small={sign1} large={sign1} alt="Bathroom-Sign"/>
             </div>
 
-            <div className="flex-shrink-0 justify-center items-center p-1">
-                <ModalImage small={sign2} large={sign2} alt="Friend-Sign" />
+            <div className="flex-shrink-0 p-1">
+                <ModalImage small={sign2} large={sign2} alt="Friend-Sign"/>
             </div>
 
             <div className="flex-shrink-0 p-1">
@@ -46,6 +47,13 @@ const Images = () => {
 
             <div className="flex-shrink-0 p-1">
                 <ModalImage small={sign8} large={sign8} alt="Yes-Sign" />
+            </div>
+
+            <div className="flex-shrink-0 p-1">
+                <ModalImage small={sign9} large={sign9} alt="Special-Sign" />
+                {/* This sign was originated from Naruto-(Hidden Leaf Secret Tai-Jutsu 1000 YEARS OF DEATH)
+                First used by Kakashi The Copy Ninja Against Naruto
+                It's just for fun */}
             </div>
         </div>
     </div>
