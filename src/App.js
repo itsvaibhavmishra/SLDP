@@ -5,16 +5,9 @@ import Webcam from "react-webcam";
 import "./App.css";
 import { drawRect } from "./labelmap";
 import Navbar from "./components/Navbar";
-
+import Images from "./components/Images";
 import Sign from "./assets/sign-1.jpeg";
-import sign1 from "./assets/Bathroom.png";
-import sign2 from "./assets/Friend.png";
-import sign3 from "./assets/Hello.png";
-import sign4 from "./assets/No.png";
-import sign5 from "./assets/Ok.png";
-import sign6 from "./assets/Please.png";
-import sign7 from "./assets/Thank You.png";
-import sign8 from "./assets/Yes.png";
+
 
 function App() {
   const webcamRef = useRef(null);
@@ -102,7 +95,6 @@ function App() {
         <div className="main-container scrolbar">
           <div className="flex flex-wrap justify-center align-center h-full">
             <div className="w-full md:w-1/2 h-full overflow-auto scrolbar">
-              {/* <img src={Sign} alt="HandSign" className="" /> */}
 
               {/* About */}
               <section class="text-gray-600 body-font overflow-hidden" id="about">
@@ -149,7 +141,7 @@ function App() {
                         <span class="text-gray-400 text-xs tracking-widest mt-0.5">LinkedIn</span>
                       </span>
                     </a>
-                    <a class="inline-flex items-center" href="mailto:vaibhavmishra658@gmail.com" target={"_blank"}>
+                    <a class="inline-flex items-center" href="mailto:vaibhavmishra658@gmail.com" >
                       <img alt="gmail" src="https://img.icons8.com/color/344/google-plus--v1.png" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"/>
                       <span class="flex-grow flex flex-col pl-4">
                         <span class="title-font font-medium text-gray-900">vaibhavmishra658</span>
@@ -168,34 +160,8 @@ function App() {
                 <Webcam ref={webcamRef} className="web top-0 left-0" />
                 <canvas ref={canvasRef} className="web absolute top-0 left-0" />
               </div>
-              <div className="overflow-y-hidden bottom-5 left-0 xScroll overflow-x-scroll">
-                <div className=" flex signContainer">
-                  <div className="flex-shrink-0 p-1 ">
-                    <img src={sign1} alt="dsad" />
-                  </div>
-                  <div className="flex-shrink-0 p-1">
-                    <img src={sign2} alt="dsad" />
-                  </div>
-                  <div className="flex-shrink-0 p-1">
-                    <img src={sign3} alt="dsad" />
-                  </div>
-                  <div className="flex-shrink-0 p-1">
-                    <img src={sign4} alt="dsad" />
-                  </div>
-                  <div className="flex-shrink-0 p-1">
-                    <img src={sign5} alt="dsad" />
-                  </div>
-                  <div className="flex-shrink-0 p-1">
-                    <img src={sign6} alt="dsad" />
-                  </div>
-                  <div className="flex-shrink-0 p-1">
-                    <img src={sign7} alt="dsad" />
-                  </div>
-                  <div className="flex-shrink-0 p-1">
-                    <img src={sign8} alt="dsad" />
-                  </div>
-                </div>
-              </div>
+              {/* Horizontal sliding images */}
+              <Images />
             </div>
           </div>
         </div>
