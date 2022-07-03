@@ -1,5 +1,7 @@
 import React from "react";
 import "../App.css";
+import ModalImage from "react-modal-image";
+
 import sign1 from "../assets/Bathroom.png";
 import sign2 from "../assets/Friend.png";
 import sign3 from "../assets/Hello.png";
@@ -14,36 +16,36 @@ const Images = () => {
     <div className="overflow-y-hidden bottom-5 left-0 xScroll overflow-x-scroll">
         <div className=" flex signContainer">
 
-            <div className="flex-shrink-0 p-1 ">
-                <img src={sign1} alt="Bathroom-Sign" />
+            <div className="flex-shrink-0 p-1">
+                <ModalImage small={sign1} large={sign1} alt="Bathroom-Sign" />
             </div>
 
             <div className="flex-shrink-0 justify-center items-center p-1">
-                <img src={sign2} alt="Friend-Sign" />
+                <ModalImage small={sign2} large={sign2} alt="Friend-Sign" />
             </div>
 
             <div className="flex-shrink-0 p-1">
-                <img src={sign3} alt="Hello-Sign" />
+                <ModalImage small={sign3} large={sign3} alt="Hello-Sign" />
             </div>
 
             <div className="flex-shrink-0 p-1">
-                <img src={sign4} alt="No-Sign" />
+                <ModalImage small={sign4} large={sign4} alt="No-Sign" />
             </div>
 
             <div className="flex-shrink-0 p-1">
-                <img src={sign5} alt="Ok-Sign" />
+                <ModalImage small={sign5} large={sign5} alt="Ok-Sign" />
             </div>
 
             <div className="flex-shrink-0 p-1">
-                <img src={sign6} alt="Please-Sign" />
+                <ModalImage small={sign6} large={sign6} alt="Please-Sign" />
             </div>
 
             <div className="flex-shrink-0 p-1">
-                <img src={sign7} alt="Thank You-Sign" />
+                <ModalImage small={sign7} large={sign7} alt="Thank You-Sign" />
             </div>
 
             <div className="flex-shrink-0 p-1">
-                <img src={sign8} alt="Yes-Sign" />
+                <ModalImage small={sign8} large={sign8} alt="Yes-Sign" />
             </div>
         </div>
     </div>
