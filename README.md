@@ -21,7 +21,7 @@
 <h2 align="center">Available Signs</h2>
 
 <p align="center">
-  <img alt="Bathroom" src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Bathroom.png" width="100"/>
+  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Bathroom.png" width="100"/>
   <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Friend.png" width="235"/>
   <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Hello.png" width="108"/>
   <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/No.png" width="140"/>
