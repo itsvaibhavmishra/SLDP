@@ -26,7 +26,7 @@
   <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Hello.png" width="108"/>
   <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/No.png" width="140"/>
   <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Ok.png" width="125"/>
-  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Please.png" width="148"/>
+  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Please.png" width="146"/>
   <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Thank You.png" width="200"/>
   <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Yes.png" width="152"/>
   <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Taijutsu.png" width="118"/>
