@@ -34,3 +34,23 @@
 </p>
 
 <p align="center">Bathroom │ Friend │ Hello	│ No │ Ok	│ Please │ Thank You │ Yes │ Special </p><br>
+
+<h2 align="center">How to Use</h2>
+
+1. Clone Repo
+
+```
+git clone https://github.com/im-ankitjais/SLDP.git
+```
+
+2. Install Dependencies
+
+```
+npm i --force
+```
+
+3. Run Project
+
+```
+npm start
+```

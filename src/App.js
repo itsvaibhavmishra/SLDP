@@ -9,7 +9,6 @@ import Images from "./components/Images";
 import Sign from "./assets/sign-1.jpeg";
 import DevLogo from "./assets/Developer.png";
 
-
 function App() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
@@ -96,68 +95,120 @@ function App() {
         <div className="main-container scrolbar">
           <div className="flex flex-wrap justify-center align-center h-full">
             <div className="w-full md:w-1/2 h-full overflow-auto scrolbar">
-
               {/* About */}
-              <section class="text-gray-600 text-center body-font overflow-hidden" id="about">
+              <section
+                class="text-gray-600 text-center body-font overflow-hidden"
+                id="about"
+              >
                 <div class="container px-5 pt-5 pb-12 mx-auto">
                   <div class="flex flex-wrap">
                     <div class="p-12 flex flex-col items-center">
-                    <span class="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest">ABOUT</span>
-                    <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">Hand Sign Detection Program</h2>
-                    <p class="leading-relaxed">
-                      The purpose of this application is to help people with speech impairments communicate freely with others.
-                      Individuals can use this web app to easily convey their messages to others using simple hand signs.<br />
-                                            
-                    </p>
-                    <img src={Sign} alt="HandSign" className="" />
-                    <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
-                    </div>
+                      <span class="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest">
+                        ABOUT
+                      </span>
+                      <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">
+                        Hand Sign Detection Program
+                      </h2>
+                      <p class="leading-relaxed">
+                        The purpose of this application is to help people with
+                        speech impairments communicate freely with others.
+                        Individuals can use this web app to easily convey their
+                        messages to others using simple hand signs.
+                        <br />
+                      </p>
+                      <img src={Sign} alt="HandSign" className="" />
+                      <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full"></div>
                     </div>
                   </div>
                 </div>
               </section>
 
               {/* Developer */}
-              <section class="text-gray-600 body-font overflow-hidden" id="developer">
+              <section
+                class="text-gray-600 body-font overflow-hidden"
+                id="developer"
+              >
                 <div class="container px-5 pt-5 pb-20 mx-auto">
                   <div class="flex flex-wrap">
                     <div class="p-12 flex flex-col items-center">
-                    <span class="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest">Developer</span>
-                    <img src={DevLogo} alt="HandSign" className="h-24 my-3" />
-                    <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">
-                      Vaibhaw Kumar Mishra</h2>
-                    <p class="leading-relaxed mb-8">
-                      Dedicated to learning new things, I am pursuing Bachelor of Technology degree in Computer Science Engineering.
-                      Attentive to new ideas and technologies, I have been involved in multiple projects and this web app is one of them.
-                    </p>
-                    <div class="flex items-center justify-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
-                    <a class="inline-flex px-3 items-center md:w-1/3 mb-2" href="https://github.com/itsvaibhavmishra" target={"_blank"} rel="noreferrer">
-                      <img alt="github" src="https://img.icons8.com/material-outlined/344/github.png" class="h-12 rounded-full flex-shrink-0 object-cover object-center"/>
-                      <span class="flex-grow flex flex-col pl-4">
-                        <span class="title-font font-medium text-gray-900">@itsvaibhavmishra</span>
-                        <span class="text-gray-400 text-xs tracking-widest mt-0.5">GitHub</span>
+                      <span class="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest">
+                        Developer
                       </span>
-                    </a>
-                    <a class="inline-flex px-3 items-center md:w-1/3 mb-2" href="https://www.linkedin.com/in/itsvaibhavmishra/" target={"_blank"} rel="noreferrer">
-                      <img alt="linkedin" src="https://img.icons8.com/fluency/344/linkedin-circled.png" class="h-12 rounded-full flex-shrink-0 object-cover object-center"/>
-                      <span class="flex-grow flex flex-col pl-4">
-                        <span class="title-font font-medium text-gray-900">@itsvaibhavmishra</span>
-                        <span class="text-gray-400 text-xs tracking-widest mt-0.5">LinkedIn</span>
-                      </span>
-                    </a>
-                    <a class="inline-flex px-3 items-center md:w-1/3" href="mailto:vaibhavmishra658@gmail.com" >
-                      <img alt="gmail" src="https://img.icons8.com/color/344/google-plus--v1.png" class="h-12 rounded-full flex-shrink-0 object-cover object-center"/>
-                      <span class="flex-grow flex flex-col pl-4">
-                        <span class="title-font font-medium text-gray-900">vaibhavmishra658</span>
-                        <span class="text-gray-400 text-xs tracking-widest mt-0.5">Gmail</span>
-                      </span>
-                    </a>
-                    </div>
+                      <img src={DevLogo} alt="HandSign" className="h-24 my-3" />
+                      <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">
+                        Vaibhaw Kumar Mishra
+                      </h2>
+                      <p class="leading-relaxed mb-8">
+                        Dedicated to learning new things, I am pursuing Bachelor
+                        of Technology degree in Computer Science Engineering.
+                        Attentive to new ideas and technologies, I have been
+                        involved in multiple projects and this web app is one of
+                        them.
+                      </p>
+                      <div class="flex items-center justify-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
+                        <a
+                          class="inline-flex items-center md:w-1/3 mb-2"
+                          href="https://github.com/itsvaibhavmishra"
+                          target={"_blank"}
+                          rel="noreferrer"
+                        >
+                          <img
+                            alt="github"
+                            src="https://img.icons8.com/material-outlined/344/github.png"
+                            class="h-12 rounded-full flex-shrink-0 object-cover object-center"
+                          />
+                          <span class="flex-grow flex flex-col">
+                            <span class="title-font font-medium text-gray-900 text-sm">
+                              @itsvaibhavmishra
+                            </span>
+                            <span class="text-gray-400 text-xs tracking-widest mt-0.5">
+                              GitHub
+                            </span>
+                          </span>
+                        </a>
+                        <a
+                          class="inline-flex items-center md:w-1/3 mb-2"
+                          href="https://www.linkedin.com/in/itsvaibhavmishra/"
+                          target={"_blank"}
+                          rel="noreferrer"
+                        >
+                          <img
+                            alt="linkedin"
+                            src="https://img.icons8.com/fluency/344/linkedin-circled.png"
+                            class="h-12 rounded-full flex-shrink-0 object-cover object-center"
+                          />
+                          <span class="flex-grow flex flex-col">
+                            <span class="title-font font-medium text-gray-900 text-sm">
+                              @itsvaibhavmishra
+                            </span>
+                            <span class="text-gray-400 text-xs tracking-widest mt-0.5">
+                              LinkedIn
+                            </span>
+                          </span>
+                        </a>
+                        <a
+                          class="inline-flex items-center md:w-1/3"
+                          href="mailto:vaibhavmishra658@gmail.com"
+                        >
+                          <img
+                            alt="gmail"
+                            src="https://img.icons8.com/color/344/google-plus--v1.png"
+                            class="h-12 rounded-full flex-shrink-0 object-cover object-center"
+                          />
+                          <span class="flex-grow flex flex-col">
+                            <span class="title-font font-medium text-gray-900 text-sm">
+                              vaibhavmishra658
+                            </span>
+                            <span class="text-gray-400 text-xs tracking-widest mt-0.5">
+                              Gmail
+                            </span>
+                          </span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </section>
-              
             </div>
             <div className="w-full md:w-1/2 h-full flex flex-col justify-center align-center relative">
               <div>
