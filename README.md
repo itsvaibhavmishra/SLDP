@@ -24,7 +24,7 @@
 <p align="center">
   <img src="https://i.imgur.com/vVI6EIE.png" width="100"/>
   <img src="https://i.imgur.com/WViaxTU.png" width="235"/>
-  <img src="https://i.imgur.com/X11Y6eD.png" width="108"/>
+  <img src="https://i.imgur.com/X11Y6e.png" width="108"/>
   <img src="https://i.imgur.com/vKLSL2A.png" width="140"/>
   <img src="https://i.imgur.com/npjCnop.png" width="125"/>
   <img src="https://i.imgur.com/CrUg228.png" width="146"/>
