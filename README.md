@@ -1,4 +1,4 @@
-<h2 align="center"><img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/SLDP.png"></h2>
+<h2 align="center"><img src="https://i.imgur.com/3YehHWW.png"></h2>
 
 <p align="center">
   <img src="https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
@@ -22,15 +22,15 @@
 <h2 align="center">Available Signs</h2>
 
 <p align="center">
-  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Bathroom.png" width="100"/>
-  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Friend.png" width="235"/>
-  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Hello.png" width="108"/>
-  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/No.png" width="140"/>
-  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Ok.png" width="125"/>
-  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Please.png" width="146"/>
-  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Thank You.png" width="200"/>
-  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Yes.png" width="152"/>
-  <img src="https://github.com/itsvaibhavmishra/SLDP/blob/main/Imgs/Taijutsu.png" width="118"/>
+  <img src="https://i.imgur.com/vVI6EIE.png" width="100"/>
+  <img src="https://i.imgur.com/WViaxTU.png" width="235"/>
+  <img src="https://i.imgur.com/X11Y6eD.png" width="108"/>
+  <img src="https://i.imgur.com/vKLSL2A.png" width="140"/>
+  <img src="https://i.imgur.com/npjCnop.png" width="125"/>
+  <img src="https://i.imgur.com/CrUg228.png" width="146"/>
+  <img src="https://i.imgur.com/UWb3qem.png" width="200"/>
+  <img src="https://i.imgur.com/gvgPLFs.png" width="152"/>
+  <img src="https://i.imgur.com/efHUsB4.png" width="118"/>
 </p>
 
 <p align="center">Bathroom │ Friend │ Hello	│ No │ Ok	│ Please │ Thank You │ Yes │ Special </p><br>
