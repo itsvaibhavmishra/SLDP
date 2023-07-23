@@ -161,11 +161,20 @@ function App() {
                         Vaibhaw Kumar Mishra
                       </h2>
                       <p class="leading-relaxed mb-8">
-                        Dedicated to learning new things, I am pursuing Bachelor
-                        of Technology degree in Computer Science Engineering.
-                        Attentive to new ideas and technologies, I have been
-                        involved in multiple projects and this web app is one of
-                        them.
+                        Dedicated to learning new things, this was my final year
+                        project for B.Tech Computer Science course. Attentive to
+                        new ideas and technologies, I have been involved in
+                        multiple projects and this web app is one of them. Make
+                        sure to checkout my{' '}
+                        <a
+                          href="https://github.com/itsvaibhavmishra"
+                          className="text-blue-500 transition-all duration-300 font-semibold hover:text-lg"
+                          target={'_blank'}
+                          rel="noreferrer"
+                        >
+                          GitHub
+                        </a>{' '}
+                        for more of my projects.
                       </p>
                       <div class="flex items-center justify-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full">
                         <a
