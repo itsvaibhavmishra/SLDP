@@ -18,9 +18,9 @@
 </p>
 
 <p align="center">Project Live - <a href="https://sldp.netlify.app">Here</a></p><br>
-
+<p align="center">Site Status - 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/578b3ed4-d645-4a12-9ba2-1c87ca02867e/deploy-status)](https://app.netlify.com/sites/sldp/deploys)
-
+</p>
 <h2 align="center">Available Signs</h2>
 
 <p align="center">
