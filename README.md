@@ -17,10 +17,9 @@
   detect sign languages in real-time using <img align="center" src="https://img.shields.io/badge/tensorflowjs-3.18.0-orange?style=flat-square&logo=html5&logoColor=white"/> in order to enable speech-impaired people to communicate effectively.
 </p>
 
-<p align="center">Project Live - <a href="https://sldp.netlify.app">Here</a></p><br>
-<div align="center">
-[![Netlify Status](https://api.netlify.com/api/v1/badges/578b3ed4-d645-4a12-9ba2-1c87ca02867e/deploy-status)](https://app.netlify.com/sites/sldp/deploys)
-</div>
+<p align="center">Project Live - <a href="https://sldp.netlify.app">Here</a></p> [![Netlify Status](https://api.netlify.com/api/v1/badges/578b3ed4-d645-4a12-9ba2-1c87ca02867e/deploy-status)](https://app.netlify.com/sites/sldp/deploys)
+<br>
+
 <h2 align="center">Available Signs</h2>
 
 <p align="center">
