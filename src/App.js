@@ -1,39 +1,37 @@
 // importing library
-import React, { useRef, useEffect } from "react";
-import * as tf from "@tensorflow/tfjs";
-import Webcam from "react-webcam";
-import "./App.css";
-import { drawRect } from "./labelmap";
-import Navbar from "./components/Navbar";
-import Images from "./components/Images";
-import Sign from "./assets/sign-1.jpeg";
-import DevLogo from "./assets/Developer.png";
+import React, { useRef, useEffect } from 'react';
+import * as tf from '@tensorflow/tfjs';
+import Webcam from 'react-webcam';
+import './App.css';
+import { drawRect } from './labelmap';
+import Navbar from './components/Navbar';
+import Images from './components/Images';
+import Sign from './assets/sign-1.jpeg';
+import DevLogo from './assets/Developer.png';
+import { useState } from 'react';
+import Loading from './components/Loading';
 
 function App() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
-
-  // Loading model
-  const runMobnet = async () => {
-    // getting model link from cloud
-    const net = await tf.loadGraphModel(
-      "https://tfjshandsignmodel.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json"
-    );
-
-    // Detecting hands
-    setInterval(() => {
-      detect(net); // fuction for making detections using webcam
-    }, 16.7); // detections frequency
-  };
+  const [isLoading, setIsLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   // function for hand detections
   const detect = async (net) => {
     // checking if camera is accessible
     if (
-      typeof webcamRef.current !== "undefined" &&
+      typeof webcamRef.current !== 'undefined' &&
       webcamRef.current !== null &&
       webcamRef.current.video.readyState === 4
     ) {
+      // for passing to Loading component
+      setLoading(false);
+
+      // for unmounting Loading component
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 12000);
       // fetching video properties
       const video = webcamRef.current.video;
       const videoWidth = webcamRef.current.video.videoWidth;
@@ -50,7 +48,7 @@ function App() {
       // Making Detections
       const img = tf.browser.fromPixels(video);
       const resized = tf.image.resizeBilinear(img, [640, 480]);
-      const casted = resized.cast("int32");
+      const casted = resized.cast('int32');
       const expanded = casted.expandDims(0);
       const obj = await net.executeAsync(expanded);
 
@@ -61,7 +59,7 @@ function App() {
       const classes = await obj[6].array(); // classes
       const scores = await obj[4].array(); // threshold
 
-      const ctx = canvasRef.current.getContext("2d");
+      const ctx = canvasRef.current.getContext('2d');
 
       // using requestAnimationFrame method for smother drawing for detections
       requestAnimationFrame(() => {
@@ -86,15 +84,39 @@ function App() {
   };
 
   useEffect(() => {
+    // Loading model
+    const runMobnet = async () => {
+      // getting model link from cloud
+      const net = await tf.loadGraphModel(
+        'https://tfjshandsignmodel.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json'
+      );
+
+      // Detecting hands
+      setInterval(() => {
+        detect(net); // fuction for making detections using webcam
+      }, 16.7); // detections frequency
+    };
     runMobnet();
   }, []);
+
   return (
     <>
       <div className="App">
         <Navbar />
         <div className="main-container scrolbar">
           <div className="flex flex-wrap justify-center align-center h-full">
-            <div className="w-full md:w-1/2 h-full overflow-auto scrolbar">
+            <div className="w-full md:w-1/2 h-full flex flex-col justify-center align-center relative md:order-last">
+              <Webcam ref={webcamRef} className="web top-0 left-0" />
+              {isLoading ? (
+                <Loading loading={loading} />
+              ) : (
+                <canvas ref={canvasRef} className="web absolute top-0 left-0" />
+              )}
+
+              {/* Horizontal sliding images */}
+              <Images />
+            </div>
+            <div className="w-full md:w-1/2 h-full overflow-auto scrolbar md:order-first">
               {/* About */}
               <section
                 class="text-gray-600 text-center body-font overflow-hidden"
@@ -149,7 +171,7 @@ function App() {
                         <a
                           class="inline-flex items-center md:w-1/3 mb-2"
                           href="https://github.com/itsvaibhavmishra"
-                          target={"_blank"}
+                          target={'_blank'}
                           rel="noreferrer"
                         >
                           <img
@@ -169,7 +191,7 @@ function App() {
                         <a
                           class="inline-flex items-center md:w-1/3 mb-2"
                           href="https://www.linkedin.com/in/itsvaibhavmishra/"
-                          target={"_blank"}
+                          target={'_blank'}
                           rel="noreferrer"
                         >
                           <img
@@ -209,14 +231,6 @@ function App() {
                   </div>
                 </div>
               </section>
-            </div>
-            <div className="w-full md:w-1/2 h-full flex flex-col justify-center align-center relative">
-              <div>
-                <Webcam ref={webcamRef} className="web top-0 left-0" />
-                <canvas ref={canvasRef} className="web absolute top-0 left-0" />
-              </div>
-              {/* Horizontal sliding images */}
-              <Images />
             </div>
           </div>
         </div>
