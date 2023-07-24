@@ -16,6 +16,8 @@ function App() {
   const canvasRef = useRef(null);
   const [isLoading, setIsLoading] = useState(true);
   const [loading, setLoading] = useState(true);
+  const videoWidthRef = useRef(640); // Set an initial value here
+  const videoHeightRef = useRef(480); // Set an initial value here
 
   // function for hand detections
   const detect = async (net) => {
@@ -36,6 +38,10 @@ function App() {
       const video = webcamRef.current.video;
       const videoWidth = webcamRef.current.video.videoWidth;
       const videoHeight = webcamRef.current.video.videoHeight;
+
+      // Update the refs with the new videoWidth and videoHeight
+      videoWidthRef.current = videoWidth;
+      videoHeightRef.current = videoHeight;
 
       // configuring video dimensions
       webcamRef.current.video.width = videoWidth;
@@ -108,7 +114,11 @@ function App() {
             <div className="w-full md:w-1/2 h-full flex flex-col justify-center align-center relative md:order-last">
               <Webcam ref={webcamRef} className="web top-0 left-0" />
               {isLoading ? (
-                <Loading loading={loading} />
+                <Loading
+                  loading={loading}
+                  videoHeight={videoHeightRef}
+                  videoWidth={videoWidthRef}
+                />
               ) : (
                 <canvas ref={canvasRef} className="web absolute top-0 left-0" />
               )}
