@@ -148,6 +148,7 @@ function App() {
                         messages to others using simple hand signs.
                         <br />
                       </p>
+                      <p className=" text-gray-400">Works best on Desktop</p>
                       <img src={Sign} alt="HandSign" className="" />
                       <div class="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full"></div>
                     </div>
